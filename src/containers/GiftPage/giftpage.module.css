@@ -1,0 +1,226 @@
+.wrapper {
+	background-size: cover;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-repeat: no-repeat;
+	background-position: bottom right;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;	
+}
+.imgwrapper {
+	margin: 20px 0;
+	width: 340px;
+	position: relative;
+	height: 200px;
+	
+}
+.imgwrapper img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	position: absolute;
+	top: 0;
+	left: 0;
+
+}
+.imgshadow {
+
+	position: relative;
+	cursor: pointer;
+}
+
+.imgshadow:after,
+.imgshadow:before {
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: center center;
+}
+.imgshadow:before {
+  box-shadow: inset 0 20px 0 rgba(0, 250, 250, 0.6), inset 20px 0 0 rgba(0, 200, 200, 0.6), inset 0 -20px 0 rgba(0, 150, 200, 0.6), inset -20px 0 0 rgba(0, 200, 250, 0.6);
+  animation: rotate-before 2s -0.5s linear infinite;
+}
+.imgshadow:after {
+  box-shadow: inset 0 20px 0 rgba(216, 171, 179, 0.6), inset 20px 0 0 rgba(214, 158, 167, 0.6), inset 0 -20px 0 rgba(211, 136, 148, 0.6), inset -20px 0 0 rgba(204, 80, 101, 0.6);
+  animation: rotate-after 2s -0.5s linear infinite;
+}
+@keyframes rotate-after {
+  0% {transform: rotateZ(0deg) scaleX(1) scaleY(1);}
+  50% {transform: rotateZ(180deg) scaleX(0.82) scaleY(0.95);}
+  100% {transform: rotateZ(360deg) scaleX(1) scaleY(1);}
+}
+@keyframes rotate-before {
+  0% {transform: rotateZ(0deg) scaleX(1) scaleY(1);}
+  50% {transform: rotateZ(-180deg) scaleX(0.95) scaleY(0.85);}
+  100% {transform: rotateZ(-360deg) scaleX(1) scaleY(1);}
+}
+
+
+.title {
+	color:  white;
+	margin: 30px 0;
+	text-align: center;
+	max-width: 240px;
+	font-size: 18px;
+}
+.action__btn {
+	width: 140px;
+	height: 140px;
+	position: relative;
+	cursor: pointer;
+}
+
+.action__btn  img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.action__title {
+	color: white;
+	display: block;
+	font-weight: 600;
+	font-size: 12px;
+	text-align: center;
+
+	position: absolute;
+	top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+.gohome {
+	background-color: aquamarine;
+	width: 150px;
+	height: 50px;
+}
+.table {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.table__title {
+	display: flex;
+
+	color: white;
+	background-color: #FF1F45;
+	height: 40px;
+	width: 700px;
+
+}
+.table__titleS {
+	flex: 0 1 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 600;
+}
+.table__titleR {
+	flex: 0 1 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 600;
+}
+ul {
+	margin: 0;
+	padding: 0;
+	margin-bottom: 20px;
+}
+.table__row {
+	display: flex;
+
+	color: black;
+	height: 40px;
+	width: 700px;
+	margin-left: 0;
+	background-color: #FFFEF4;
+	padding-left: 0;
+}
+.table__rowS {
+	flex: 0 1 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 600;
+	border-right: 1px solid #df8897;
+	border-bottom: 1px solid transparent;
+}
+.table__rowR {
+	flex: 0 1 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 600;
+
+}
+.li {
+	list-style-type: none;
+ }
+
+li:nth-child(even){
+	background-color: #FFD1D1;
+ }
+
+ @media (max-width : 1199px) {
+	.imgwrapper {
+		margin: 20px 0;
+		width: 320px;
+	}
+}
+ @media (max-width : 991px) {
+	.table__title {
+		width: 600px;
+	}
+	.table__row {
+		width: 600px;
+	}
+	.imgwrapper {
+		margin: 15px 0;
+		width: 300px;
+	}
+}
+@media (max-width : 767px) {
+	.table__title {
+		width: 500px;
+	}	.table__row {
+		width: 500px;
+	}
+	.imgwrapper {
+		margin: 10px 0;
+		width: 280px;
+	}
+}
+@media (max-width : 567px) {
+	.table__title {
+		width: 300px;
+		flex-direction: column;
+		height: 70px;
+	}	.table__row {
+		width: 300px;
+		flex-direction: column;
+		height: 70px;
+	}
+	.table__rowS {
+		border-bottom: 1px solid #df8897;
+		border-right: 1px solid transparent;
+	}
+	.imgwrapper {
+		margin: 10px 0;
+		width: 250px;
+	}
+}
